@@ -13,7 +13,7 @@ public class Universite implements Serializable {
     private Long idUniversite;
     private String nomUniversite;
     private String adresse;
-
-    @OneToOne
+//c'est le pere
+    @OneToOne(mappedBy = "universite")
     private Foyer foyer;
 }

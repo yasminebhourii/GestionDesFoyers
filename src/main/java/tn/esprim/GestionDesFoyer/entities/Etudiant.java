@@ -11,7 +11,6 @@ import java.util.List;
 public class Etudiant implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idEtudiant;
     private String nomEt;
     private String prenomEt;
@@ -19,6 +18,6 @@ public class Etudiant implements Serializable {
     private String ecole;
     @JsonFormat(pattern = "yyyy-MM-dd")
     private Date dateNaissance;
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany
     private List<Reservation> reservations;
 }

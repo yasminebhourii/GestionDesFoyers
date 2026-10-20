@@ -18,7 +18,7 @@ public class Foyer implements Serializable {
     private Long capaciteFoyer;
 
     @JsonIgnore
-    @OneToOne(mappedBy = "foyer")
+    @OneToOne
     private Universite universite;
 
     @OneToMany(mappedBy = "foyer", cascade = CascadeType.ALL)

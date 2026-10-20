@@ -2,20 +2,20 @@ package tn.esprim.GestionDesFoyer.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
 @Entity
 @Getter @Setter
 @NoArgsConstructor @AllArgsConstructor
-public class Reservation {
+public class Reservation implements Serializable{
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String idReservation;
     private Date anneeUniversitaire;
     private Boolean estValide;
     @ManyToOne
     private Chambre chambre;
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(mappedBy = "reservations")
     private List<Etudiant> etudiants;
 }
