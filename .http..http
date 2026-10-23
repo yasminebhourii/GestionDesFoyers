@@ -1,0 +1,14 @@
+   ### Liste des chambres
+   GET http://localhost:8086/tpfoyer/chambre/retrieve-all-chambres
+   POST http://localhost:8086/tpfoyer/chambre/add-chambre
+   Content-Type: application/json
+   { "numeroChambre": 101, "typeC": "DOUBLE" }
+
+   ### Modifier
+   PUT http://localhost:8086/tpfoyer/chambre/modify-chambre
+   Content-Type: application/json
+
+   { "idChambre": 1, "numeroChambre": 102, "typeC": "TRIPLE" }
+
+   ### Supprimer
+   DELETE http://localhost:8086/tpfoyer/chambre/remove-chambre/1
